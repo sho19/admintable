@@ -86,9 +86,16 @@ function Table() {
                 setError(error);
             }
         }
-        else{
+        else {
             setShowProfile(false)
         }
+    }
+
+    const phoneFormatter = (cell, row, rowIndex, formatExtraData) => {
+        let splitcell = cell.split(' ')[0]
+        let onlyNumber = splitcell.replace(/[^0-9]/g, '')
+        let phone = onlyNumber.length > 10 ? `+${splitcell}` : `${splitcell}`
+        return (<span>{phone}</span>)
     }
 
 
@@ -106,7 +113,7 @@ function Table() {
         { dataField: "name", text: "Name", sort: true },
         { dataField: "username", text: "User Name", sort: true },
         { dataField: "email", text: "Email", sort: true },
-        { dataField: "phone", text: "Phone", sort: true },
+        { dataField: "phone", text: "Phone", sort: true, formatter: phoneFormatter },
         { dataField: "website", text: "Website", sort: true },
         {
             dataField: "", text: "Profile", sort: false,
