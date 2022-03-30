@@ -11,7 +11,7 @@ const Home = () => {
                     name="my_iframe"
                     title="admin-table-frame"
                     src={URL}
-                    height={'750px'}
+                    height={'700px'}
                     width="100%"
                 ></iframe>
             </div>
