@@ -3,7 +3,6 @@ import './home.css'
 
 const Home = () => {
     const URL = `${window?.location?.protocol}//${window.location.hostname}:${window.location.port}/display-users`
-    console.log(URL)
     return (
         <div>
             <div className="home-table-header"><h3>Table</h3></div>

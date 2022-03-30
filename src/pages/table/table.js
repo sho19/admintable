@@ -98,13 +98,11 @@ function Table() {
 
 
     const profileFormatter = (cell, row, rowIndex, formatExtraData) => {
-        const rowId = row.id;
-        return (<label for="menu-opener" tabindex="0" onClick={() => { setProfileData(row) }} aria-haspopup="true" role="button" aria-controls="menu" class="OpenMenuButton" id="openmenu">View Profile</label>)
+        return (<label for="menu-opener" tabindex="0" onClick={() => { setProfileData(row) }} aria-haspopup="true" role="button" aria-controls="menu" className={"OpenMenuButton"} id="openmenu">View Profile</label>)
     }
 
     const postFormatter = (cell, row, rowIndex, formatExtraData) => {
-        const rowId = row.id;
-        return (<label for="menu-opener" tabindex="0" onClick={() => { fetchUserPosts(row, row.id) }} aria-haspopup="true" role="button" aria-controls="menu" class="OpenMenuButton" id="openmenu">View Posts</label>)
+        return (<label for="menu-opener" tabindex="0" onClick={() => { fetchUserPosts(row, row.id) }} aria-haspopup="true" role="button" aria-controls="menu" className={"OpenMenuButton"} id="openmenu">View Posts</label>)
     }
 
     const columns = [
@@ -223,8 +221,8 @@ function Table() {
                 />
 
                 <input type="checkbox" data-menu id="menu-opener" hidden />
-                <aside class="DrawerMenu" role="menu" id="menu" aria-labelledby="openmenu">
-                    <nav class="Menu">
+                <aside className={"DrawerMenu"} role="menu" id="menu" aria-labelledby="openmenu">
+                    <nav className={"Menu"}>
 
                         {showProfile ?
                             <>
@@ -275,7 +273,7 @@ function Table() {
                             </div>
                         }
                     </nav>
-                    <label for="menu-opener" class="MenuOverlay"></label>
+                    <label for="menu-opener" className={"MenuOverlay"}></label>
                 </aside>
             </div>
         );
