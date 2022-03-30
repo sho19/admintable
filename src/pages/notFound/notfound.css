@@ -1,0 +1,10 @@
+.page-container {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    mix-blend-mode: overlay;
+}
+
