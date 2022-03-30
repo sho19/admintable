@@ -69,7 +69,6 @@ function Table() {
     const fetchUserPosts = async (row, id) => {
         if (userPosts?.userId !== id) {
             try {
-                console.log(`${REACT_APP_API_URL}/posts?userId=${row.id}`)
                 setShowProfile(false)
                 generateInitials(row.name)
                 const request = new Request(`${REACT_APP_API_URL}/posts?userId=${row.id}`, {
@@ -77,7 +76,6 @@ function Table() {
                 });
                 let resp = await fetch(request)
                 let body = await resp.json()
-                console.log(body)
                 setUserPosts(body)
             }
             catch (e) {
@@ -171,12 +169,12 @@ function Table() {
         alwaysShowAllBtns: true,
         sizePerPageList: [{ text: 5, value: 5 }, { text: 10, value: 10 }, { text: 20, value: 20 }],
         onPageChange: function (page, sizePerPage) {
-            console.log("page", page);
-            console.log("sizePerPage", sizePerPage);
+            // console.log("page", page);
+            // console.log("sizePerPage", sizePerPage);
         },
         onSizePerPageChange: function (page, sizePerPage) {
-            console.log("page", page);
-            console.log("sizePerPage", sizePerPage);
+            // console.log("page", page);
+            // console.log("sizePerPage", sizePerPage);
         },
         sizePerPageRenderer: sizePerPageRenderer
     });
